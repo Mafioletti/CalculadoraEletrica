@@ -1,3 +1,4 @@
+    function calculadoraConsumo(){
     let eletrodomestico = prompt("Digite qual o eletrodoméstico: ");
     let opcao = Number(prompt(`Digite qual potencia está sendo considerada:
     1 - Watt
@@ -20,4 +21,5 @@
     alert("Olhe no console");
     console.log("O eletrodoméstico é: " + eletrodomestico);
     console.log("O  consumo por dia é: " + (KWh.toFixed(2)) + " kilowatts");
-    console.log("O valor a ser pago por ele é: "+ ((KWh * 30) * taxa).toFixed(2))
+    console.log("O valor mensal a ser pago por ele é: "+ ((KWh * 30) * taxa).toFixed(2))
+}
