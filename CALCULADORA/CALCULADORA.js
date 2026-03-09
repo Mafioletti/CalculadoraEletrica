@@ -1,7 +1,6 @@
 let opcao = parseInt(prompt(`Digite qual operação deseja fazer:
     1. Calculadora Consumo
     2. Calculadora Mult&Sub
-    3. Calculadora Resistores
     `));
 
     switch(opcao){
@@ -11,4 +10,6 @@ let opcao = parseInt(prompt(`Digite qual operação deseja fazer:
         case 2:
             calculadoraMultSub();
         break;
+        default:
+            alert("Opção Indisponível");
     }
