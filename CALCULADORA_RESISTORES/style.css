@@ -1,0 +1,103 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #16213e;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #4ecca3;
+}
+
+header p {
+    font-size: 0.9rem;
+    color: #94a1b2;
+    margin-bottom: 2rem;
+}
+
+/* Estilização do Resistor Visual */
+.resistor-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.resistor-body {
+    width: 120px;
+    height: 40px;
+    background-color: #d4a373;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding: 0 10px;
+}
+
+.wire {
+    width: 40px;
+    height: 4px;
+    background-color: #a5a5a5;
+}
+
+.stripe {
+    width: 6px;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+}
+
+/* Botões */
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    background-color: #4ecca3;
+    color: #1a1a2e;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #45b293;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+footer p {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #666;
+}

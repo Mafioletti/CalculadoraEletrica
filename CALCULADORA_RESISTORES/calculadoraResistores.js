@@ -4,7 +4,7 @@ let faixas = parseInt(prompt("Digite quantas faixas tem o resistor: "))
         cores4();
     }
     else if(faixas == 5){
-        cores4();
+        cores5();
     }
     else{
         alert("Opção indisponível");

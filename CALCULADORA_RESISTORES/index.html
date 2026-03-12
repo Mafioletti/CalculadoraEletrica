@@ -1,14 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Calculadora de Resistores</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="cores4.js"></script>
+
+    <div class="container">
+        <header>
+            <h1>Calculadora de Ohms</h1>
+            <p>Selecione o tipo de resistor para iniciar o cálculo</p>
+        </header>
+
+        <div class="resistor-display">
+            <div class="wire"></div>
+            <div class="resistor-body">
+                <div class="stripe s1"></div>
+                <div class="stripe s2"></div>
+                <div class="stripe s3"></div>
+                <div class="stripe s4"></div>
+            </div>
+            <div class="wire"></div>
+        </div>
+
+        <div class="button-group">
+            <button onclick="cores4()" class="btn">4 Faixas</button>
+            <button onclick="cores5()" class="btn">5 Faixas</button>
+        </div>
+
+        <footer>
+            <p>Insira as cores via prompt ao clicar nos botões.</p>
+        </footer>
+    </div>
     <script src="cores5.js"></script>
-    <script src="calculadoraResistores.js"></script>
+    <script src="cores4.js"></script>
 </body>
 </html>
