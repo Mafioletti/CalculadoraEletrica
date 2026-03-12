@@ -1,69 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Resistor</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Calculadora de Resistência</h1>
-        
-        <div class="resistor-preview">
-            <div class="fio"></div>
-            <div class="corpo-resistor">
-                <div id="faixa1" class="faixa"></div>
-                <div id="faixa2" class="faixa"></div>
-                <div id="faixa3" class="faixa"></div>
-                <div id="faixa4" class="faixa"></div>
-            </div>
-            <div class="fio"></div>
-        </div>
-
-        <div class="controles">
-            <div class="campo">
-                <label>1ª Faixa</label>
-                <select id="select-faixa1">
-                    <option value="0">Preto</option>
-                    <option value="1">Marrom</option>
-                    <option value="2">Vermelho</option>
-                    </select>
-            </div>
-
-            <div class="campo">
-                <label>2ª Faixa</label>
-                <select id="select-faixa2">
-                    <option value="0">Preto</option>
-                    <option value="1">Marrom</option>
-                    <option value="2">Vermelho</option>
-                    </select>
-            </div>
-
-            <div class="campo">
-                <label>Multiplicador</label>
-                <select id="select-multiplicador">
-                    <option value="1">Preto (x1)</option>
-                    <option value="10">Marrom (x10)</option>
-                    <option value="100">Vermelho (x100)</option>
-                    </select>
-            </div>
-
-            <div class="campo">
-                <label>Tolerância</label>
-                <select id="select-tolerancia">
-                    <option value="5">Dourado (±5%)</option>
-                    <option value="10">Prata (±10%)</option>
-                </select>
-            </div>
-        </div>
-
-        <div id="resultado-container">
-            <span class="label-resultado">Valor da Resistência:</span>
-            <div id="resultado">--- Ω</div>
-        </div>
-    </div>
-
+    <script src="cores4.js"></script>
+    <script src="cores5.js"></script>
+    <script src="calculadoraResistores.js"></script>
 </body>
 </html>
