@@ -3,38 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Resistores</title>
+    <title>Calculadora de Resistores Pro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
+    <div id="container">
         <header>
-            <h1>Calculadora de Ohms</h1>
-            <p>Selecione o tipo de resistor para iniciar o cálculo</p>
+            <h1>Ohm Calculator</h1>
+            <p>Selecione o modelo e insira as cores</p>
         </header>
 
-        <div class="resistor-display">
+        <div class="select-wrapper">
+            <select id="tipo-resistor" onchange="alternarModo()">
+                <option value="4">Resistor de 4 Faixas</option>
+                <option value="5">Resistor de 5 Faixas</option>
+            </select>
+        </div>
+
+        <div id="resistor-display">
             <div class="wire"></div>
-            <div class="resistor-body">
-                <div class="stripe s1"></div>
-                <div class="stripe s2"></div>
-                <div class="stripe s3"></div>
-                <div class="stripe s4"></div>
-            </div>
+            <div id="resistor-body">
+                <div class="stripe" id="s1"></div>
+                <div class="stripe" id="s2"></div>
+                <div class="stripe" id="s3"></div>
+                <div class="stripe" id="s4"></div>
+                <div class="stripe" id="s5"></div> </div>
             <div class="wire"></div>
         </div>
 
-        <div class="button-group">
-            <button onclick="cores4()" class="btn">4 Faixas</button>
-            <button onclick="cores5()" class="btn">5 Faixas</button>
+        <button onclick="iniciarCalculo()" class="btn-main">Definir Cores</button>
+
+        <div id="resultado-container">
+            <span id="label-res">Resistência:</span>
+            <div id="valor-ohm">--- Ω</div>
         </div>
 
         <footer>
-            <p>Insira as cores via prompt ao clicar nos botões.</p>
+            <p>Precisa de ajuda com as cores? <br> Clique no botão para inserir via prompt.</p>
         </footer>
     </div>
-    <script src="cores5.js"></script>
+
     <script src="cores4.js"></script>
+    <script src="cores5.js"></script>
+    <script>
+        // Função simples para alternar a exibição da 5ª faixa
+        function alternarModo() {
+            const tipo = document.getElementById('tipo-resistor').value;
+            const s5 = document.getElementById('s5');
+            s5.style.display = (tipo === "5") ? "block" : "none";
+        }
+
+        // Função para chamar o script correto baseado na escolha
+        function iniciarCalculo() {
+            const tipo = document.getElementById('tipo-resistor').value;
+            if (tipo === "4") cores4();
+            else cores5();
+        }
+    </script>
 </body>
 </html>
