@@ -1,41 +1,50 @@
-# ⚡ Calculadora de Consumo Elétrico
+⚡ Calculadora de Resistores Pro
+Uma ferramenta web interativa projetada para entusiastas de eletrônica e engenheiros. Calcule a resistência de componentes de forma visual, rápida e precisa.
 
-Um script interativo em **JavaScript** desenvolvido para calcular o consumo de energia de eletrodomésticos e estimar o custo mensal na conta de luz.
+🎨 Preview da Interface
+A aplicação simula um resistor real na tela, onde as faixas ganham cores dinamicamente conforme a entrada do usuário, facilitando a conferência visual do componente físico.
 
-## 🚀 Como usar
+🚀 Funcionalidades
+Seleção de Modelo: Alternância dinâmica entre resistores de 4 e 5 faixas.
 
-Este script foi criado para ser executado diretamente no **Console do Navegador**.
+Feedback Visual: O corpo do resistor no HTML é atualizado em tempo real via CSS.
 
-1. Copie todo o código do arquivo `.js`.
-2. Abra seu navegador (Chrome, Edge ou Firefox).
-3. Pressione `F12` e clique na aba **Console**.
-4. Cole o código e pressione `Enter`.
-5. Digite `eletrodomestico();` e siga as instruções nos pop-ups.
+Tratamento de Unidades: Conversão inteligente para Ω, kΩ e MΩ.
 
-## 🛠️ Funcionalidades
+Interface Moderna: Design focado em legibilidade com tipografia Inter e sombras suaves.
 
-O programa guia o usuário através de `prompts` para coletar:
-- Nome do aparelho.
-- Unidade de medida da potência (**Watt** ou **Kilowatt**).
-- Valor da potência.
-- Tempo de uso diário (em horas).
+🛠️ Tecnologias
+🧠 Lógica de Funcionamento
+O projeto utiliza uma estrutura modular. O arquivo principal captura a intenção do usuário e direciona para o cálculo correto:
 
-## 📊 Fórmulas Utilizadas
+Fluxo de Chamada
+O sistema utiliza um seletor no index.html que dispara a função iniciarCalculo(). Esta, por sua vez, verifica a quantidade de faixas para chamar o script específico:
 
-O cálculo baseia-se na conversão de potência para Kilowatt-hora (kWh) e na projeção mensal:
+// Trecho da lógica de controle integrada
+function iniciarCalculo() {
+    const tipo = document.getElementById('tipo-resistor').value;
+    
+    if (tipo === "4") {
+        cores4(); // Executa lógica para 2 dígitos + multiplicador
+    } else if (tipo === "5") {
+        cores5(); // Executa lógica para 3 dígitos + multiplicador
+    } else {
+        alert("Opção indisponível");
+    }
+}
+Diferença de Cálculos
 
-1. **Conversão para kWh:**
-   $$KWh = \frac{\text{Potência (W)} \times \text{Tempo (h)}}{1000}$$
+  Modelo      Fórmula de Cálculo        Precisão
+4 Faixas       (D1×10+D2)×Mult           Padrão
+5 Faixas    (D1×100+D2×10+D3)×Mult        Alta 
 
-2. **Custo Mensal (Base 30 dias):**
-   $$\text{Custo Total} = (KWh \times 30) \times 0.90$$
-   *(Considerando uma tarifa média de R$ 0,90 por kWh)*
 
-## 💻 Exemplo de Saída no Console
+📁 Como Instalar
+Clone o repositório:
 
-Ao finalizar o preenchimento, o script retorna os dados formatados:
+git clone https://github.com/seu-usuario/calculadora-resistores.git
 
-```text
-O eletrodoméstico é: Geladeira
-O consumo por dia é: 2.40 kilowatts
-O valor a ser pago por ele é: 64.80
+Navegue até a pasta do projeto e abra o arquivo index.html em seu navegador de preferência.
+
+📝 Notas de Uso
+Ao clicar em "Definir Cores", digite os nomes das cores em português (ex: azul, vermelho, dourado). O script converterá automaticamente para os valores e atualizará o visual do componente.
