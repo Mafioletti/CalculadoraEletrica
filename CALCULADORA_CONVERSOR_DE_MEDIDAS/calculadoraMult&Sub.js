@@ -1,4 +1,3 @@
-function calculadoraMultSub() {
     // Opções de potências de 10 para cada unidade (expoentes)
     const escalas = {
         1: 9,  // giga (10^9)
@@ -23,7 +22,6 @@ function calculadoraMultSub() {
     
     if (!escalas[atual] && escalas[atual] !== 0) {
         alert("Operação indisponível: Unidade inválida.");
-        return;
     }
 
     let startValue = parseFloat(prompt("Digite o valor inicial:"));
@@ -40,7 +38,6 @@ function calculadoraMultSub() {
 
     if (!escalas[convertion] && escalas[convertion] !== 0) {
         alert("Operação indisponível: Unidade inválida.");
-        return;
     }
 
     // Lógica de conversão:
@@ -53,4 +50,3 @@ function calculadoraMultSub() {
     alert("Resultado enviado para o console!");
     console.log(`Convertendo de 10^${expoenteOrigem} para 10^${expoenteDestino}`);
     console.log("O valor final é: " + resultado);
-}
