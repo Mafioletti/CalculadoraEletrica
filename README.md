@@ -21,7 +21,7 @@ Fluxo de Chamada
 O sistema utiliza um seletor no index.html que dispara a função iniciarCalculo(). Esta, por sua vez, verifica a quantidade de faixas para chamar o script específico:
 
 // Trecho da lógica de controle integrada
-
+```js
 function iniciarCalculo() {
 
     const tipo = document.getElementById('tipo-resistor').value;
@@ -34,7 +34,7 @@ function iniciarCalculo() {
         alert("Opção indisponível");
     }
 }
-
+```
 Diferença de Cálculos
 
   Modelo      Fórmula de Cálculo        Precisão
